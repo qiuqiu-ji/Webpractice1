@@ -96,6 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // 计算压缩后的大小
             const compressedSize = Math.round((compressedDataUrl.length - 'data:image/jpeg;base64,'.length) * 3/4);
             document.getElementById('compressedSize').textContent = formatFileSize(compressedSize);
+            
+            // 启用下载按钮
+            downloadBtn.disabled = false;
         };
     }
 
